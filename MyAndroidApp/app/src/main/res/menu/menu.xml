@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_action_contacts"
+        android:icon="@drawable/ic_action_contacts"
+        android:title="@string/action_contacts"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/menu_action_add_contact"
+        android:icon="@drawable/ic_action_add_person"
+        android:title="@string/action_add_contact"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/menu_action_appointments"
+        android:icon="@drawable/ic_action_appointments"
+        android:title="@string/action_appointments"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/menu_action_schedule_appointment"
+        android:icon="@drawable/ic_action_add_contact"
+        android:title="@string/action_schedule_appointment"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/menu_action_logout"
+        android:icon="@drawable/ic_action_logout"
+        android:title="@string/logout"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/menu_action_quit"
+        android:icon="@drawable/ic_action_quit"
+        android:title="@string/quit"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/menu_action_swap_lang"
+        android:title="@string/swap_lang"
+        app:showAsAction="ifRoom"/>
+
+
+</menu>

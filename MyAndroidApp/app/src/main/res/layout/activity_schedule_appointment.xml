@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="co.app.my.myandroidapp.ScheduleAppointment">
+
+
+
+    <include
+        layout="@layout/toolbar_fragment"
+        android:id="@+id/main_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:id="@+id/mainLinear"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/main_menu"
+        android:layout_above="@+id/middle"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:weightSum="3">
+        <ScrollView
+            android:id="@+id/my_Scedule_menu"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:padding="10dp"
+            android:layout_below="@id/main_menu"
+            android:background="@color/FormField">
+            <!-- Schedule appointment form -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- date field -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                     <TextView
+                         android:text="@string/insert_date"
+                         android:textAppearance="?android:attr/textAppearanceLarge"
+                         android:id="@+id/insert_date_label"
+                         android:layout_weight="1"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"/>
+                     <EditText
+                         android:hint="@string/Format_date"
+                         android:inputType="textUri"
+                         android:id="@+id/insert_date_EditText"
+                         android:layout_weight="2"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <!-- time field -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:text="@string/insert_time"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/insert_time_label"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:hint="@string/Format_Time"
+                        android:inputType="textUri"
+                        android:id="@+id/insert_time_EditText"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <!-- address field -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:text="@string/insert_address"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/insert_address_label"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:hint="@string/Example_Address"
+                        android:inputType="textUri"
+                        android:id="@+id/insert_address_EditText"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <!-- place field -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:text="@string/insert_place"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/insert_place_label"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:hint="@string/Place_Hint"
+                        android:inputType="textUri"
+                        android:id="@+id/insert_place_EditText"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/middle"
+        android:background="@color/colorAccent"
+        android:gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Get_Location"
+            android:id="@+id/Get_Location_Button"
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:text="@string/Select_Contacts"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/Selected_Participants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/middle"
+        android:background="@color/colorAccent"
+        />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/CheckList"
+        android:layout_below="@id/Selected_Participants"
+        android:layout_above="@+id/bottomLinear"
+        >
+
+
+
+
+    </ListView>
+    <LinearLayout
+        android:id="@+id/bottomLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+        <Button
+        android:id="@+id/confirm_appointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight = "0"
+        android:text="@string/action_schedule_appointment"
+
+        />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+
+    tools:context="co.app.my.myandroidapp.LoginActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorLight"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Scroll">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:text="@string/app_name"
+                android:gravity="center_vertical"
+                android:id="@+id/ToolbarPosition"
+                android:textSize="@dimen/Title_font_size"
+                android:background="@color/colorPrimaryLight"
+                />
+
+            <EditText
+                android:id="@+id/editTextUN"
+                android:hint="@string/Username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ToolbarPosition"
+                android:layout_centerHorizontal="true"
+                android:inputType="textVisiblePassword"/>
+
+            <EditText
+                android:id="@+id/editTextPW"
+                android:layout_below="@id/editTextUN"
+                android:hint="@string/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+
+                android:inputType="textPassword" />
+            <EditText
+                android:id="@+id/editTextReEnterPW"
+                android:layout_below="@id/editTextPW"
+                android:hint="@string/Re_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:inputType="textPassword" />
+
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_below="@id/editTextReEnterPW"
+                android:hint="@string/Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:inputType="text" />
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_below="@id/editTextEmail"
+                android:hint="@string/EnterName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/editTextLastName"
+                android:layout_below="@id/editTextName"
+                android:hint="@string/EnterLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:inputType="text" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/editTextLastName"
+                android:id="@+id/AlignedButtons">
+                <Button
+                    android:id="@+id/buttonBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:hint="@string/Back"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:id="@+id/buttonRegister"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:hint="@string/Register"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/AlignedButtons"
+                android:layout_centerHorizontal="true"
+                android:ems="15"
+                android:id="@+id/buttonExit"
+                android:hint="@string/Exit"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
